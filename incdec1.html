@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head><title>INC/DEC PROBLEM</title>
+<style>
+		
+		input[type="text"]{
+		background-color: #DEDEE6; 
+		border: 4px solid black;
+		margin:2px;
+		}
+		input[type="button"],input[type="reset"]{
+		color: white;
+		background-color: black;
+		border: 1px solid white;
+		margin:2px;
+		}
+
+		
+		
+		
+</style>
+
+<script>
+	function increment(){
+		var x=document.getElementById("input");
+		var y=document.getElementById("output");
+		y.value=parseInt(x.value)+1;
+  }
+  
+  	function decrement(){
+		var x=document.getElementById("input");
+		var y=document.getElementById("output");
+		y.value=parseInt(x.value)-1;
+  }
+  
+	function clear1(){
+		var x=document.getElementById("input");
+		var y=document.getElementById("output");
+		y.value="";
+		x.value="";
+  }
+
+  function check()
+  {
+	var input=document.getElementById("input");
+    if (isNaN(input.value) ||input.value==" " || input.value=="") {alert('VALUE NOT A NUMBER'); return false;}
+	return true;
+  }
+  
+  </script>		
+</head>
+
+<body>
+	<form>
+		<div style="background-color:orange;border:solid black 7px; border-radius: 25px; width:400px;">
+		<div style="color:white;background-color:black;border:solid black 2px; margin-bottom:2px;text-align:center;">INC/DEC PROBLEM</div>
+		<div style="width:150px;float:left">   <label>Enter Integer:</label> </div>	<div> <input type="text" id="input" /> </div>
+		<div style="width:150px;float:left">   <label>Answer:</label>   </div>   <div> <input type="text" id="output"/> </div> 
+
+
+
+
+<div>
+	<center>
+	<input  type="button" value="Increment" style="color:white" onclick="if( check()) increment();" />
+	<input  type="button" value="Decrement" style="color:white" onclick="decrement();" />
+	<input type="button" value="Clear" style="color:white" onclick="clear1();" />
+	</center>
+</div> 
+
+
+
+
+</div>
+</form>
+</body>
+</html>

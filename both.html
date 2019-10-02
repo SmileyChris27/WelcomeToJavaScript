@@ -1,0 +1,125 @@
+<html>
+<head>
+<title>TWO  PROBLEMS</title>
+
+<style>
+		input[type="text"]{
+		background-color: #DEDEE6; 
+		border: 4px solid black;
+		margin:2px;
+		}
+		input[type="button"],input[type="reset"]{
+		color: white;
+		background-color: black;
+		border: 1px solid white;
+		margin:2px;
+		}
+</style>
+
+<script>
+	function increment1_1(){
+		var x=document.getElementById("input");
+		var y=document.getElementById("output");
+		y.value=parseInt(x.value)+1;
+  }
+  
+  	function decrement2_1(){
+		var x=document.getElementById("input");
+		var y=document.getElementById("output");
+		y.value=parseInt(x.value)-1;
+  }
+  
+	function clear1(){
+		var x=document.getElementById("input");
+		var y=document.getElementById("output");
+		y.value="";
+		x.value="";
+  }
+</script>
+
+<script>
+	
+	function increment2_1(){
+		var x=document.getElementById("input2");
+		var y=document.getElementById("output1");
+		y.value=parseInt(x.value)+1;
+  }
+  
+  	function decrement2_2(){
+		var x=document.getElementById("input2");
+		var y=document.getElementById("output2");
+		y.value=parseInt(x.value)-1;
+  }
+  
+    function both(){
+		var x=document.getElementById("input2");
+		var y=document.getElementById("output1");	    
+		y.value=parseInt(x.value)+1;		
+		var y=document.getElementById("output2");
+		y.value=parseInt(x.value)-1;
+  }
+  
+	function clear1(){
+		var x=document.getElementById("input2");
+		var y=document.getElementById("output");
+		y.value="";
+		x.value="";
+  }
+</script>				
+
+</head>
+<body>
+		<table style="border:solid black 5px">
+		   <th colspan="2" style="background:black;color:white;text-align:middle;">TWO PROBLEMS</th>
+		   <tr> <td style="border:solid black 5px;">	
+   
+   
+		<form>
+				<div style="background-color:orange;border:solid black 7px; border-radius: 25px; width:400px;">
+				<div style="color:white;background-color:black;border:solid black 2px; margin-bottom:2px;text-align:center;">INC/DEC PROBLEM</div>
+				<div style="width:150px;float:left">   <label>Enter Integer:</label> </div>	<div> <input type="text" id="input" /> </div>
+				<div style="width:150px;float:left">   <label>Answer:</label>   </div>   <div> <input type="text" id="output"/> </div> 
+
+
+
+		<div>
+			<center>
+			<input  type="button" value="Increment" style="color:white" onclick="increment1_1();" />
+			<input  type="button" value="Decrement" style="color:white" onclick="decrement2_1();" />
+			<input type="reset" value="Clear" style="color:white" />
+			</center>
+		</div> 
+
+
+	</div>
+</form>
+
+
+	
+	
+	
+	</td>  
+		<td style="border:solid black 5px;"><form>
+			<div style="background-color:orange;border:solid black 7px; border-radius: 25px; width:400px;">
+			<div style="color:white;background-color:black;border:solid black 2px; margin-bottom:2px;text-align:center;">INC/DEC PROBLEM</div>
+			<div style="width:150px;float:left">   <label>Enter Integer:</label> </div>	<div> <input type="text" id="input2" /> </div>
+			<div style="width:150px;float:left">   <label>Increment:</label>   </div>   <div> <input type="text" id="output1"/> </div> 
+			<div style="width:150px;float:left">   <label>Decrement:</label>   </div>   <div> <input type="text" id="output2"/> </div> 
+
+			
+			
+<div>
+	<center>
+	<input type="button" value="Increment" style="color:white;" onclick="increment2_1();"/>
+	<input type="button" value="Decrement" style="color:white;" onclick="decrement2_2();"/>
+	<input type="button" value="Both" style="color:white;" 		onclick="both();"/> 
+	<input type="reset" value="Clear" style="color:white;"		onclick="clear1();"/>
+	</center>
+</div> 
+</div>
+
+
+</form> </td> </tr>
+</table>
+</body>
+</html>
